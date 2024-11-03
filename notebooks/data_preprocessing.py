@@ -5,8 +5,7 @@ import pandas as pd
 # Load raw data
 data = pd.read_csv('data/raw_data.csv')
 
-# Perform data cleaning and preprocessing (e.g., handling missing values, encoding, scaling)
-# Example processing steps:
+# Perform data cleaning and preprocessing 
 data['Day of the Week'] = data['Day of the Week'].map({'Weekday': 0, 'Weekend': 1})
 data = pd.get_dummies(data, columns=['Weather'])
 
