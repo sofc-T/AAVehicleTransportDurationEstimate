@@ -9,7 +9,7 @@
 5. [Model Details](#model-details)
 
 ## Introduction
-This project aims to predict the duration of vehicle transport trips in Addis Ababa based on various features such as distance, start hour, day of the week, and weather conditions. The model is built using linear regression techniques and can be used to estimate trip durations for better transportation planning.
+This project aims to predict the duration of vehicle transport trips in Addis Ababa based on various features such as distance, start hour, day of the week, and weather conditions. The model is built using linear regression techniques and can be used to estimate trip durations for better transportation planning2.
 
 - Linear Regression used in the report notebook
 - Ridge regression used in the model training note book to penalize/ regularize larger Ceofficients and reduce overfitting - better prediction.
