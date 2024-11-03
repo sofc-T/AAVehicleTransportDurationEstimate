@@ -5,25 +5,32 @@ from sklearn.linear_model import Ridge
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.metrics import root_mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
 
 # Load the training dataset
-train_data = pd.read_csv('path/to/your/addis_ababa_trip_duration_train.csv')
+train_data = pd.read_csv('../data/splits/X_train.csv')
 
 # Define features and target variable
-X = train_data.drop(columns=['Trip Duration (min)'])
-y = train_data['Trip Duration (min)']
+y = pd.read_csv('../data/splits/y_train.csv')
+# print(y)
+# print(train_data)
+
+# train_data.rename(columns=lambda x: x.strip(), inplace=True)
+
+
+print(train_data.columns)
+X = train_data
 
 # Feature Engineering: Create new features
 # Add binary feature for weekend
 X['Is_Weekend'] = (X['Day of the Week'] == 'Weekend').astype(int)
 
 # Drop the original 'Day of the Week' column
-X = X.drop(columns=['Day of the Week'])
+X.drop(columns=['Day of the Week'], axis=1)
 
 # Define categorical and numerical features
-categorical_features = ['Weather', 'Is_Weekend']
+categorical_features = ['Weather_Clear', 'Weather_Cloudy', 'Weather_Rain', 'Is_Weekend']
 numerical_features = ['Distance (km)', 'Start Hour']
 
 # Create a column transformer for preprocessing
@@ -47,17 +54,23 @@ mean_mse = np.mean(-cross_val_scores)
 model.fit(X, y)
 
 # Load the test dataset
-test_data = pd.read_csv('path/to/your/addis_ababa_trip_duration_test.csv')
+test_data = pd.read_csv('../data/splits/X_test.csv')
 
 # Prepare the test features
-X_test = test_data.drop(columns=['Trip Duration (min)'])
-y_test = test_data['Trip Duration (min)']
+print(test_data.columns)
+X_test = test_data
+y_test = pd.read_csv('../data/splits/y_test.csv')
+
+
+# add is weekend for the test data 
+
+X_test['Is_Weekend'] = (X_test['Day of the Week'] == 'Weekend').astype(int)
 
 # Test the model
 y_pred = model.predict(X_test)
 
 # Evaluate the model
-mse = mean_squared_error(y_test, y_pred)
+mse = root_mean_squared_error(y_test, y_pred)
 mae = mean_absolute_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 

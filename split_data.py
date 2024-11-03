@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Load your processed dataset
-data = pd.read_csv('data/processed_data.csv')
+data = pd.read_csv('./data/processed_data.csv')
 
 # Separate features and target
 X = data.drop('Trip Duration (min)', axis=1)  # Features

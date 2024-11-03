@@ -1,0 +1,16 @@
+Trip ID,Distance (km),Start Hour,Day of the Week,Weather_Clear,Weather_Cloudy,Weather_Rain
+84,2.2,5,1,False,True,False
+54,18.0,2,0,False,True,False
+71,15.7,11,1,False,True,False
+46,13.6,8,1,False,True,False
+45,5.9,23,0,False,False,True
+40,9.4,9,0,False,True,False
+23,6.6,19,1,True,False,False
+81,17.4,4,0,False,False,True
+11,1.4,3,1,True,False,False
+1,8.1,6,1,False,False,True
+19,9.2,20,0,False,True,False
+31,12.5,8,1,True,False,False
+74,16.5,3,0,True,False,False
+34,19.0,5,0,False,True,False
+91,3.3,5,0,True,False,False
