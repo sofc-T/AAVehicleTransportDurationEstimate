@@ -34,8 +34,10 @@ Copy code
 git clone <repository_url>
 cd Addis_Trip_Duration_Predictor
 Prepare the Dataset: Place your dataset in the data/ directory. Ensure it's in the CSV format and named processed_data.csv.
+```
 
-## Usage
+## usage
+```
 Split the Data: Run the split_data.py script to prepare training, validation, and test sets:
 
 bash
@@ -53,10 +55,13 @@ Copy code
 # Load the model and make predictions
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-
+```
 
 ## Model-details
+
 # Make predictions
+
+```
 Algorithm: Linear Regression
 Features Used:
 Distance (km)
@@ -66,4 +71,4 @@ Weather Condition
 Evaluation Metrics:
 Mean Squared Error (MSE)
 R² Score
-
+```
