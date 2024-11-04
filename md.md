@@ -7,7 +7,6 @@
 3. [Setup](#setup)
 4. [Usage](#usage)
 5. [Model Details](#model-details)
-6. [License](#license)
 
 ## Introduction
 This project aims to predict the duration of vehicle transport trips in Addis Ababa based on various features such as distance, start hour, day of the week, and weather conditions. The model is built using linear regression techniques and can be used to estimate trip durations for better transportation planning.
@@ -52,17 +51,8 @@ Copy code
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-# Load test data
-X_test = pd.read_csv('data/splits/X_test.csv')
-
-# Initialize and train the model
-model = LinearRegression()
-model.fit(X_train, y_train)
 
 # Make predictions
-predictions = model.predict(X_test)
-print(predictions)
-Model Details
 Algorithm: Linear Regression
 Features Used:
 Distance (km)
@@ -72,3 +62,4 @@ Weather Condition
 Evaluation Metrics:
 Mean Squared Error (MSE)
 R² Score
+

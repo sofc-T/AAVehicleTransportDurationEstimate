@@ -22,3 +22,10 @@ Thumbs.db
 # IDE settings (optional)
 .vscode/
 .idea/
+
+
+bin/*
+lib/*
+lib64
+share/jupyter/*
+share/*
