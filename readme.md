@@ -1,6 +1,6 @@
 
 # Addis Ababa Vehicle Transport Trip Duration Predictor
-
+# [Report](https://github.com/sofc-T/AAVehicleTransportDurationEstimate/blob/main/reports/model_verfication.ipynb)
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
