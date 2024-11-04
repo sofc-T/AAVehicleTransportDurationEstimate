@@ -21,6 +21,8 @@ This project aims to predict the duration of vehicle transport trips in Addis Ab
   - seaborn
   - statsmodels
 
+
+## Setup
 You can install the required libraries using pip:
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn statsmodels
@@ -33,6 +35,7 @@ git clone <repository_url>
 cd Addis_Trip_Duration_Predictor
 Prepare the Dataset: Place your dataset in the data/ directory. Ensure it's in the CSV format and named processed_data.csv.
 
+## Usage
 Split the Data: Run the split_data.py script to prepare training, validation, and test sets:
 
 bash
@@ -52,6 +55,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 
+## Model-details
 # Make predictions
 Algorithm: Linear Regression
 Features Used:
